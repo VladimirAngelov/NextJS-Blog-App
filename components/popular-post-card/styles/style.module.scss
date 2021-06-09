@@ -1,0 +1,48 @@
+.popular-post {
+  width: 100%;
+  height: 45vh;
+  position: relative;
+  margin-bottom: 3vh;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 60%;
+    border-radius: 7px;
+    z-index: -1;
+  }
+
+  .type {
+    display: flex;
+    color: #fff;
+    background: dodgerblue;
+    width: 4vw;
+    height: 3vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 3vh 0 0 2vw;
+    position: absolute;
+    @media only screen and (max-width: 1300.98px) {
+      width: 7vw;
+    }
+
+    @media only screen and (max-width: 575.98px) {
+      width: 20vw;
+      margin: 3vh 0 0 5vw;
+      font-size: 0.8rem;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    margin-top: 4vh;
+    font-size: 1.4rem;
+  }
+
+  .author {
+    font-style: italic;
+    color: #a0a0a0;
+    font-size: 1.1rem;
+  }
+}

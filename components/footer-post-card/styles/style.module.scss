@@ -1,0 +1,33 @@
+.footer-post-card {
+  display: grid;
+  grid-template-columns: 5vw 15vw;
+
+  img {
+    object-fit: cover;
+    margin-top: 3vh;
+    width: 90px;
+    height: 95px;
+    display: inline-block;
+  }
+
+  .content {
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+
+    .footer-post-title {
+      @media only screen and (max-width: 1700px) {
+        margin-left: 1vw;
+      }
+
+      font-weight: 800;
+    }
+
+    .footer-post-author {
+      @media only screen and (max-width: 1700px) {
+        margin-left: 1vw;
+      }
+
+      font-style: italic;
+    }
+  }
+}

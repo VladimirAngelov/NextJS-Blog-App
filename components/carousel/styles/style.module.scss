@@ -1,0 +1,63 @@
+.carousel {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 29px;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 90%);
+    width: 20px;
+    margin-right: -1px;
+    height: 240px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 90%);
+    width: 20px;
+    margin-left: -1px;
+    height: 240px;
+    z-index: 1;
+    transform: scaleX(-1);
+  }
+
+  .partners {
+    margin-top: 7vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: bannerMove 15s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  @keyframes bannerMove {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  img {
+    object-fit: cover;
+    margin-right: 2vw;
+  }
+}

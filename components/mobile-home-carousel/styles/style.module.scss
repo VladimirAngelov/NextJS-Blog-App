@@ -1,0 +1,85 @@
+.carousel-container {
+  @media only screen and (max-width: 575.98px) {
+    height: 45vh;
+    position: relative;
+    margin-top: -1px;
+  }
+
+  .mobile-home-carousel {
+    min-height: 45vh;
+    min-width: 100%;
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin-bottom: 1vh;
+
+      .dot {
+        border: none;
+        border-radius: 100%;
+        background: white;
+        width: 3.5vw;
+        height: 2.5vh;
+        display: inline-block;
+        margin-right: 2vw;
+        z-index: 2;
+      }
+    }
+
+    p {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      margin: 0 0 4vh 6vw;
+      line-height: 3vh;
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .author {
+      margin-bottom: 14vh;
+      //font-style: italic;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    .type {
+      display: flex;
+      color: #fff;
+      background: dodgerblue;
+      width: 19vw;
+      font-size: 0.8rem;
+      height: 3vh;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      margin: 3vh 0 0 5vw;
+      position: absolute;
+    }
+
+    img {
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    @media only screen and (min-width: 575.98px) {
+      display: none;
+    }
+
+    @media only screen and (max-width: 900px) {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+}
