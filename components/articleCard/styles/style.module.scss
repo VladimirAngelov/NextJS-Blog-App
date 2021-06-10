@@ -4,7 +4,8 @@
   justify-content: center;
   position: relative;
   margin-bottom: 20vh;
-
+  cursor: pointer;
+  
   @media only screen and (max-width: 575.98px) {
     display: none;
   }

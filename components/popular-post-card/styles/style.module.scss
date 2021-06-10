@@ -23,8 +23,11 @@
     border-radius: 5px;
     margin: 3vh 0 0 2vw;
     position: absolute;
-    @media only screen and (max-width: 1300.98px) {
+    @media only screen and (max-width: 1350.98px) {
       width: 7vw;
+    }
+    @media only screen and (max-width: 900px) {
+      width: 10vw;
     }
 
     @media only screen and (max-width: 575.98px) {
