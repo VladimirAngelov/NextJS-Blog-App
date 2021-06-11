@@ -12,6 +12,9 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ data }) {
+  if (undefined == data) {
+    return '';
+  }
   return (
     <>
       <Header />

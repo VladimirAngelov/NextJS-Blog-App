@@ -7,10 +7,15 @@ import Buttons from "../../components/buttons"
 import Link from "next/link"
 
 const HomePage = ({ data }) => {
+  // console.log(data.length, 'debug')
+  if (undefined == data) {
+    return '';
+  }
+
   const [currentPage, setCurrentPage] = useState(1)
   let dataToShow
 
-  const smallArticles = data.slice(0, 4).map(x => (
+  const smallArticles = data?.slice(0, 4)?.map(x => (
     <Link href={`/details/${x.id}`}>
       <div className={style["small-article"]}>
         <img src={x.urls.regular} alt="" />
@@ -21,16 +26,16 @@ const HomePage = ({ data }) => {
     </Link>
 
   ))
-  const pageCount = data.length / 5
+  const pageCount = data?.length / 5
 
   if (currentPage === 0) setCurrentPage(1)
 
   if (currentPage === 1) {
-    dataToShow = data.slice(0, currentPage * 5)
+    dataToShow = data?.slice(0, currentPage * 5)
   } else {
     const end = currentPage * 5
     const start = currentPage * 5 - 5
-    dataToShow = data.slice(start, end)
+    dataToShow = data?.slice(start, end)
   }
 
   return (
@@ -50,12 +55,12 @@ const HomePage = ({ data }) => {
       </div>
       <div className={style.main}>
         <div className={style["left-side"]}>
-          {dataToShow.map(x => <MainArticle id={x.id} imageURL={x.urls.regular} />)}
+          {dataToShow.map(x => <MainArticle key={x.id} id={x.id} imageURL={x.urls.regular} />)}
         </div>
         <div className={style["right-side"]}>
           <TopRightArticle data={data} />
           <h3>Popular posts</h3>
-          {data.slice(0, 5).map(x => <PopularPost imageURL={x.urls.regular} />)}
+          {data.slice(0, 5).map(x => <PopularPost key={x.id} id={x.id} imageURL={x.urls.regular} />)}
         </div>
         <Buttons currentPage={currentPage} setCurrentPage={setCurrentPage} buttonCount={pageCount} />
       </div>

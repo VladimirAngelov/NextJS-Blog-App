@@ -10,7 +10,7 @@ export const getStaticPaths = async () => {
   const data = await getAllData()
   const paths = data?.results.map(x => ({ params: { id: x.id.toString() } }))
 
-  return { paths, fallback: false }
+  return { paths, fallback: true }
 }
 
 export const getStaticProps = async (ctx) => {
@@ -19,7 +19,7 @@ export const getStaticProps = async (ctx) => {
 }
 
 const Component = ({ data }) => {
-  console.log(data)
+  // console.log(data)
   return (
     <>
       <Header />

@@ -4,6 +4,17 @@
   position: relative;
   margin-bottom: 3vh;
 }
+@media only screen and (max-width: 1350.98px) {
+  .popular-post {
+    margin-bottom: 0;
+    height: 30vh;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .popular-post {
+    margin-bottom: 12vh;
+  }
+}
 .popular-post img {
   width: 100%;
   object-fit: cover;
@@ -44,6 +55,11 @@
   font-weight: bold;
   margin-top: 4vh;
   font-size: 1.4rem;
+}
+@media only screen and (max-width: 1350.98px) {
+  .popular-post .title {
+    margin-top: 1vh;
+  }
 }
 .popular-post .author {
   font-style: italic;

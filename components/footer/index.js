@@ -9,6 +9,9 @@ import {
 import FooterPostCard from "../footer-post-card"
 
 const Footer = ({ data }) => {
+  if (undefined == data) {
+    return '';
+  }
   return (
     <div>
       <footer className={style.footer}>
