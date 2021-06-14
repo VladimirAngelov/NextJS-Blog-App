@@ -5,6 +5,7 @@ import TopRightArticle from "../../components/top-right-article"
 import PopularPost from "../../components/popular-post-card"
 import Buttons from "../../components/buttons"
 import Link from "next/link"
+import Tags from "../../components/tags"
 
 const HomePage = ({ data }) => {
   // console.log(data.length, 'debug')
@@ -59,8 +60,9 @@ const HomePage = ({ data }) => {
         </div>
         <div className={style["right-side"]}>
           <TopRightArticle data={data} />
-          <h3>Popular posts</h3>
+          <h3 className={style['popular-post-heading']}>Popular posts</h3>
           {data.slice(0, 5).map(x => <PopularPost key={x.id} id={x.id} imageURL={x.urls.regular} />)}
+          <Tags/>
         </div>
         <Buttons currentPage={currentPage} setCurrentPage={setCurrentPage} buttonCount={pageCount} />
       </div>

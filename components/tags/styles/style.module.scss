@@ -1,0 +1,27 @@
+.tags {
+  display: flex;
+  flex-basis: auto;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 100%;
+
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
+
+  .tag {
+    max-height: 32px;
+    background: #EBEBEB;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 40px 25px 20px;
+    margin-right: 5px;
+    align-items: center;
+  }
+}
+
+.tag-title {
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
+}

@@ -33,6 +33,7 @@
 @media only screen and (max-width: 1300.98px) {
   .top-right-article .content {
     margin-top: -2vh;
+    line-height: 5vh;
   }
 }
 .top-right-article button {

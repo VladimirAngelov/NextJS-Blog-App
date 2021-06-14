@@ -35,7 +35,7 @@ const Component = ({ data }) => {
           </p>
         </div>
       </div>
-      <Image className={style["details-image"]} src={data?.urls.regular} width={1080} height={500}
+      <Image className={style["details-image"]} src={data?.urls.regular} width={1920} height={1060}
              layout={"responsive"} />
       <div className={style["article-content"]}>
         <div className={style["left-side"]}>
@@ -52,7 +52,7 @@ const Component = ({ data }) => {
             doloribus ducimus eligendi eos facere illum molestias mollitia natus officiis, optio praesentium quia
             repellat
             sed totam veritatis vitae voluptatibus!</p>
-          <h3>Next on the pipeline</h3>
+          <div className={style['pipeline-title']}>Next on the pipeline</div>
           <p className={style.next}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic laudantium odio officia reprehenderit? Aliquid
             amet asperiores, corporis dolor eius hic id in ipsam, iste modi mollitia officia quos repellat soluta
@@ -91,7 +91,10 @@ const Component = ({ data }) => {
           </div>
         </div>
         <div className={style["right-side"]}>
-          <span className={style["right-ad"]}><img src={data?.urls.thumb} width={200} height={200} alt="" /></span>
+          <div className={style["right-ad"]}>
+            ADVERTISEMENT
+            <img src={data?.urls.thumb} width={300} height={250} alt="" />
+          </div>
         </div>
       </div>
       <div className={style["most-popular"]}>

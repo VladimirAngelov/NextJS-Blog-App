@@ -10,22 +10,28 @@
     height: 30vh;
   }
 }
+@media only screen and (max-width: 950.98px) {
+  .popular-post {
+    margin-bottom: 80px;
+  }
+}
 @media only screen and (max-width: 575.98px) {
   .popular-post {
-    margin-bottom: 12vh;
+    margin-bottom: 140px;
   }
 }
 .popular-post img {
   width: 100%;
   object-fit: cover;
   height: 60%;
+  min-height: 240px;
   border-radius: 7px;
   z-index: -1;
 }
 .popular-post .type {
   display: flex;
   color: #fff;
-  background: dodgerblue;
+  background: #4A90E2;
   width: 4vw;
   height: 3vh;
   justify-content: center;
@@ -63,7 +69,7 @@
 }
 .popular-post .author {
   font-style: italic;
-  color: #a0a0a0;
+  color: #666666;
   font-size: 1.1rem;
 }
 

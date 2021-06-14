@@ -27,7 +27,7 @@
 .top-section .large-article .type {
   display: flex;
   color: #fff;
-  background: dodgerblue;
+  background: #4A90E2;
   width: 4vw;
   height: 4vh;
   justify-content: center;
@@ -79,7 +79,7 @@
 .top-section .small-articles .small-article .type {
   display: flex;
   color: #fff;
-  background: dodgerblue;
+  background: #4A90E2;
   width: 4vw;
   height: 4vh;
   justify-content: center;
@@ -147,6 +147,16 @@
 }
 .main .right-side {
   margin: 10px 0 0 0;
+}
+@media only screen and (min-width: 1293px) {
+  .main .right-side {
+    max-width: 410px;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .main .right-side .popular-post-heading {
+    margin-top: 40px;
+  }
 }
 .main .right-side h3 {
   margin-top: 4vh;

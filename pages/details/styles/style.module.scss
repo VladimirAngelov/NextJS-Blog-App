@@ -37,7 +37,11 @@
     }
 
     .excerpt {
-      font-size: 1.2rem;
+      font-family: PT Mono;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.5em;
+      text-align: center;
       line-height: 5vh;
       @media only screen and (max-width: 575.98px) {
         line-height: 4vh;
@@ -62,13 +66,22 @@
   }
 
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 726px 300px;
   margin: 5vh 16vw 5vh 25vw;
+  column-gap: 37px;
 
   .left-side {
+    max-width: 726px;
 
     p {
       line-height: 30px;
+    }
+
+    .pipeline-title {
+      font-family: PT Serif Caption;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2rem;
     }
 
     .author-date {
@@ -117,10 +130,21 @@
           display: inline-flex;
           justify-content: center;
           align-items: center;
-          border: 1px solid #d7d7d7;
-          border-radius: 5px;
+          border: 1px solid #EAEAEA;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+          border-radius: 4px;
           width: 80px;
           height: 50px;
+        }
+
+        :nth-child(1) {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        :nth-child(2) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
         }
       }
     }
@@ -144,13 +168,14 @@
 
         img {
           width: 100%;
-          height: 150px;
+          max-height: 90px;
           object-fit: cover;
         }
       }
 
       .second-ad {
         img {
+          max-height: 485px;
           width: 100%;
         }
       }
@@ -161,7 +186,7 @@
 
         img {
           width: 100%;
-          height: 150px;
+          max-height: 90px;
           object-fit: cover;
         }
       }
@@ -172,7 +197,7 @@
 
       img {
         width: 100%;
-        height: 150px;
+        max-height: 90px;
         object-fit: cover;
       }
     }
@@ -194,6 +219,16 @@
 
       }
 
+      .facebook-button {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .twitter-button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
       button {
         display: flex;
         align-items: center;
@@ -203,7 +238,8 @@
         height: 5vh;
         background: transparent;
         border: 1px solid #d7d7d7;
-        border-radius: 5px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
         font-weight: 700;
 
         @media only screen and (max-width: 575.98px) {
@@ -218,6 +254,7 @@
   }
 
   .right-side {
+
     @media only screen and (max-width: 900px) {
       display: none;
     }
@@ -226,7 +263,10 @@
     }
 
     .right-ad {
-      float: right;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      //float: right;
     }
   }
 }

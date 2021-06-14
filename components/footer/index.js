@@ -6,11 +6,13 @@ import {
   GooglePlusBoxIcon,
   InstagramIcon
 } from "@icons/material"
+import icons from '../../utils/icons'
+
 import FooterPostCard from "../footer-post-card"
 
 const Footer = ({ data }) => {
   if (undefined == data) {
-    return '';
+    return ""
   }
   return (
     <div>
@@ -26,23 +28,19 @@ const Footer = ({ data }) => {
             <div className={style.social}>
               <strong>Keep in touch</strong>
               <div className={style.icons}>
-                <FacebookBoxIcon />
-                <TwitterBoxIcon />
-                <PinterestBoxIcon />
-                <GooglePlusBoxIcon />
-                <InstagramIcon />
+                {Object.values(icons).map(x => <img style={{background: '#373737',padding: 7, width: 32, height: 32, borderRadius: 3, marginRight: 15}} src={x} alt="" />)}
               </div>
             </div>
           </div>
           <div className={style["recent-posts"]}>
             <strong>Recent posts</strong>
-            <FooterPostCard data={data[0] || data}/>
-            <FooterPostCard data={data[0] || data}/>
+            <FooterPostCard data={data[0] || data} />
+            <FooterPostCard data={data[0] || data} />
           </div>
         </div>
       </footer>
       <div className={style["all-rights"]}>
-        <p>&copy;2019 Logwork. All Rights Reserved.</p>
+        <p>&copy; 2019 Logwork. All Rights Reserved.</p>
       </div>
     </div>
   )
