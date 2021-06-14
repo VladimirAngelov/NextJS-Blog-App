@@ -33,7 +33,7 @@
 @media only screen and (max-width: 1300.98px) {
   .top-right-article .content {
     margin-top: -2vh;
-    line-height: 5vh;
+    line-height: 3vh;
   }
 }
 .top-right-article button {
@@ -46,6 +46,14 @@
   font-size: 1rem;
   font-weight: bold;
   border: none;
+}
+@media (min-width: 1920.98px) {
+  .top-right-article .content {
+    font-size: 2.5rem;
+  }
+  .top-right-article .name {
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=style.module.css.map */

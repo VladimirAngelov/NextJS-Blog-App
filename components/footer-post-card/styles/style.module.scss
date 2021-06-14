@@ -30,4 +30,11 @@
       font-style: italic;
     }
   }
+
+  @media (min-width: 1921px) {
+    img {
+      width: 180px;
+      height: 190px;
+    }
+  }
 }

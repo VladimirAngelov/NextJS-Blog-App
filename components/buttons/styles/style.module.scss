@@ -26,6 +26,12 @@
     @media only screen and (max-width: 575.98px) {
       width: 100%;
     }
+    @media (min-width: 1920.98px) {
+      width: 3vw;
+      height: 4vh;
+      font-size: 3rem;
+    }
+
   }
 
 }

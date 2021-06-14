@@ -87,6 +87,21 @@
   margin-right: 1.8vw;
   cursor: pointer;
 }
+.header .navigation .search img {
+  height: 17px;
+  width: 16px;
+}
+@media (min-width: 1921px) {
+  .header .navigation .search img {
+    height: 34px;
+    width: 32px;
+  }
+}
+@media (max-width: 900px) {
+  .header .navigation .search img {
+    display: none;
+  }
+}
 .header .navigation a {
   margin: 2vw;
 }
@@ -128,6 +143,11 @@
     margin-left: 5vw;
     font-size: 1rem;
     margin-top: 1vh;
+  }
+}
+@media (min-width: 1920.98px) {
+  .header .navigation {
+    font-size: 3rem;
   }
 }
 

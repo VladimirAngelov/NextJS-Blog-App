@@ -29,5 +29,11 @@
     margin-left: 1vw;
   }
 }
+@media (min-width: 1921px) {
+  .footer-post-card img {
+    width: 180px;
+    height: 190px;
+  }
+}
 
 /*# sourceMappingURL=style.module.css.map */

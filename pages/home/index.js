@@ -6,13 +6,13 @@ import PopularPost from "../../components/popular-post-card"
 import Buttons from "../../components/buttons"
 import Link from "next/link"
 import Tags from "../../components/tags"
+import Type from "../../components/data-type"
 
 const HomePage = ({ data }) => {
   // console.log(data.length, 'debug')
   if (undefined == data) {
     return '';
   }
-
   const [currentPage, setCurrentPage] = useState(1)
   let dataToShow
 
@@ -20,7 +20,7 @@ const HomePage = ({ data }) => {
     <Link href={`/details/${x.id}`}>
       <div className={style["small-article"]}>
         <img src={x.urls.regular} alt="" />
-        <div className={style.type}>Vehicle</div>
+        <Type type={'Vehicle'}/>
         <p className={style.author}>Lorem ipsum dolor.</p>
         <p className={style.title}>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
       </div>
@@ -45,7 +45,7 @@ const HomePage = ({ data }) => {
         <Link href={`/details/${data[4]?.id}`}>
           <div className={style["large-article"]}>
             <img src={data[4]?.urls.regular} alt="" />
-            <div className={style.type}>Vehicle</div>
+            <Type type={'Vehicle'}/>
             <p className={style.author}>Lorem ipsum dolor.</p>
             <p className={style.title}>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
           </div>

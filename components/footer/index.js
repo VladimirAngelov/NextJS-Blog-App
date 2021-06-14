@@ -1,17 +1,10 @@
 import style from "./styles/style.module.css"
-import {
-  FacebookBoxIcon,
-  TwitterBoxIcon,
-  PinterestBoxIcon,
-  GooglePlusBoxIcon,
-  InstagramIcon
-} from "@icons/material"
-import icons from '../../utils/icons'
+import icons from "../../utils/icons"
 
 import FooterPostCard from "../footer-post-card"
 
 const Footer = ({ data }) => {
-  if (undefined == data) {
+  if (undefined === data) {
     return ""
   }
   return (
@@ -28,7 +21,7 @@ const Footer = ({ data }) => {
             <div className={style.social}>
               <strong>Keep in touch</strong>
               <div className={style.icons}>
-                {Object.values(icons).map(x => <img style={{background: '#373737',padding: 7, width: 32, height: 32, borderRadius: 3, marginRight: 15}} src={x} alt="" />)}
+                {Object.values(icons).slice(1).map(x => <img src={x} alt="" />)}
               </div>
             </div>
           </div>

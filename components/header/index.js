@@ -1,6 +1,7 @@
 import style from "./styles/style.module.css"
 import Link from "next/link"
 import { MagnifyIcon, MenuIcon } from "@icons/material"
+import icons from '../../utils/icons'
 import DropDown from "../burger-menu"
 
 const Header = () => {
@@ -26,7 +27,7 @@ const Header = () => {
             <Link href="/purchase">Purchase</Link>
           </div>
           <div className={style.search}>
-            <MagnifyIcon onClick={() => {
+            <img src={icons.search} onClick={() => {
               const element = document.getElementById("search-container")
 
               if (element.style.display === "flex") {
@@ -34,7 +35,7 @@ const Header = () => {
               } else {
                 element.style.display = "flex"
               }
-            }} />
+            }} alt=""/>
           </div>
           <div onClick={showDropdownMenu} className={style["burger-menu"]}>
             <MenuIcon width={30} height={30} />

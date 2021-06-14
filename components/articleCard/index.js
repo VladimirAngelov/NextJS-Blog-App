@@ -1,5 +1,6 @@
 import style from "./styles/style.module.css"
 import Link from "next/link"
+import Type from "../data-type"
 
 const MainArticle = ({ imageURL, id }) => {
   return (
@@ -7,7 +8,7 @@ const MainArticle = ({ imageURL, id }) => {
       <div className={style["main-article"]}>
         <img src={imageURL} alt="" />
         <div className={style["article-content"]}>
-          <div className={style.type}>Vehicle</div>
+          <Type type={'Vehicle'}/>
           <p className={style.title}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>

@@ -31,5 +31,12 @@
     width: 100%;
   }
 }
+@media (min-width: 1920.98px) {
+  .buttons button {
+    width: 3vw;
+    height: 4vh;
+    font-size: 3rem;
+  }
+}
 
 /*# sourceMappingURL=style.module.css.map */

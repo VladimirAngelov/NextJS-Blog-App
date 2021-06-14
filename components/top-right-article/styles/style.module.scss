@@ -1,8 +1,8 @@
 .top-right-article {
   height: 60vh;
   width: 100%;
-  //background: red;
   position: relative;
+
   @media only screen and (max-width: 575.98px) {
     display: none;
   }
@@ -30,7 +30,7 @@
   .content {
     @media only screen and (max-width: 1300.98px) {
       margin-top: -2vh;
-      line-height: 5vh;
+      line-height: 3vh;
     }
 
     color: #5a5a5a;
@@ -54,4 +54,15 @@
       //margin-top: 1vh;
     }
   }
+
+  @media (min-width: 1920.98px) {
+    .content {
+      font-size: 2.5rem;
+    }
+
+    .name {
+      font-size: 3rem;
+    }
+  }
+
 }
