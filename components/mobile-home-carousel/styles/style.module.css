@@ -22,8 +22,8 @@
   border: none;
   border-radius: 100%;
   background: white;
-  width: 3.5vw;
-  height: 2vh;
+  width: 0.8em;
+  height: 0.8em;
   display: inline-block;
   margin-right: 2vw;
   z-index: 2;
@@ -43,19 +43,6 @@
   font-weight: 400;
   font-size: 1rem;
 }
-.carousel-container .mobile-home-carousel .type {
-  display: flex;
-  color: #fff;
-  background: dodgerblue;
-  width: 19vw;
-  font-size: 0.8rem;
-  height: 3vh;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  margin: 3vh 0 0 5vw;
-  position: absolute;
-}
 .carousel-container .mobile-home-carousel img {
   z-index: -1;
   object-fit: cover;
@@ -70,6 +57,35 @@
     display: block;
     height: 100%;
     width: 100%;
+  }
+}
+@media (max-width: 1293.98px) and (min-width: 576px) {
+  .carousel-container .mobile-home-carousel {
+    display: flex;
+  }
+  .carousel-container .mobile-home-carousel .dots {
+    display: flex;
+    position: static;
+    margin-bottom: -550px;
+    margin-right: 310px;
+  }
+  .carousel-container .mobile-home-carousel .dots .dot {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .carousel-container .mobile-home-carousel p {
+    position: static;
+    font-size: 2rem;
+    width: 250%;
+  }
+  .carousel-container .mobile-home-carousel .author {
+    padding-bottom: -200px;
+    margin-top: 400px;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .carousel-container .mobile-home-carousel :first-child :last-child {
+    height: 60vh;
   }
 }
 @media only screen and (max-width: 900px) {
