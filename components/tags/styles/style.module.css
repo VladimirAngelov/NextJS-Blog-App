@@ -26,6 +26,11 @@
     border-radius: 6px;
   }
 }
+@media (max-width: 1293px) {
+  .tags .tag {
+    padding: 5px 10px 20px 10px;
+  }
+}
 
 @media only screen and (max-width: 900px) {
   .tag-title {

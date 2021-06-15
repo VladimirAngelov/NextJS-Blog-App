@@ -65,11 +65,17 @@
 
     @media (max-width: 1293.98px) and (min-width: 576px) {
       display: flex;
+
       .dots {
         display: flex;
         position: static;
         margin-bottom: -550px;
         margin-right: 310px;
+
+        @media (max-width: 768px) {
+          margin-bottom: -650px;
+          margin-right: 250px;
+        }
 
         .dot {
           width: 1.5em;
