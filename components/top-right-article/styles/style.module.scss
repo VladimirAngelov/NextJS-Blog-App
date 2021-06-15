@@ -11,6 +11,11 @@
     margin-top: 200px;
   }
 
+  @media (orientation: landscape) and (max-width: 1300px) {
+    margin-top: 30vh;
+    margin-bottom: 25vh;
+  }
+
   img {
     width: 100%;
     object-fit: cover;
@@ -35,6 +40,9 @@
     @media only screen and (max-width: 1300.98px) {
       margin-top: -2vh;
       line-height: 3vh;
+    }
+    @media (orientation: landscape) {
+      line-height: 6vh;
     }
 
     color: #5a5a5a;

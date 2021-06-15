@@ -17,6 +17,10 @@
     margin-bottom: 140px;
   }
 
+  @media (orientation: landscape) and (max-width: 1300px) {
+    margin-bottom: 55vh;
+  }
+
   img {
     width: 100%;
     object-fit: cover;

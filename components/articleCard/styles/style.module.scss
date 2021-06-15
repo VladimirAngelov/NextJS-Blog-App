@@ -18,6 +18,10 @@
     margin-bottom: 250px;
   }
 
+  @media (orientation: landscape) {
+    margin-bottom: 300px;
+  }
+
   img {
     object-fit: cover;
     width: 100%;

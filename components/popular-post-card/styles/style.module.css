@@ -20,6 +20,11 @@
     margin-bottom: 140px;
   }
 }
+@media (orientation: landscape) and (max-width: 1300px) {
+  .popular-post {
+    margin-bottom: 55vh;
+  }
+}
 .popular-post img {
   width: 100%;
   object-fit: cover;

@@ -21,6 +21,11 @@
     margin-bottom: 250px;
   }
 }
+@media (orientation: landscape) {
+  .main-article {
+    margin-bottom: 300px;
+  }
+}
 .main-article img {
   object-fit: cover;
   width: 100%;
