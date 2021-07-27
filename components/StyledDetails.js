@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { fonts } from "../../styles/StyledVariables"
+import { fonts } from "../styles/StyledVariables"
 
 export const DetailsHeader = styled.div`
   display: flex;

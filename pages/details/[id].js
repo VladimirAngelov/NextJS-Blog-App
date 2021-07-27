@@ -3,7 +3,7 @@ import Footer from "../../components/footer"
 import getAllData, { getSinglePhoto } from "../../utils/getData"
 import Image from "next/image"
 import PopularPost from "../../components/popular-post-card"
-import { ArticleContent, DetailsHeader, MostPopular } from "./StyledDetails"
+import { ArticleContent, DetailsHeader, MostPopular } from "../../components/StyledDetails"
 import Head from "next/head"
 
 export const getStaticPaths = async () => {
