@@ -3,7 +3,7 @@ var adUnits = [
     code: '/19968336/header-bid-tag-1',
     mediaTypes: {
       banner: {
-        sizes: [[300, 250]]
+        sizes: [[728, 90], [970, 250]]
       }
     },
     bids: [{
@@ -14,7 +14,7 @@ var adUnits = [
     }]
   }
 ];
-
+console.log('here')
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];

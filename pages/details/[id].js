@@ -5,8 +5,10 @@ import Image from "next/image"
 import PopularPost from "../../components/popular-post-card"
 import { ArticleContent, DetailsHeader, MostPopular } from "../../components/StyledDetails"
 import Head from "next/head"
-import Script from "next/script"
+// import Script from "next/script"
 import { useEffect } from "react"
+import Advertisement from "../../components/advertisement"
+import { v4 as uuidv4 } from 'uuid';
 
 export const getStaticPaths = async () => {
   const data = await getAllData()
@@ -37,8 +39,10 @@ const Component = ({ data }) => {
           rel="stylesheet" />
         <link
           href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption&family=PT+Serif:wght@400;700&display=swap"
-          rel="stylesheet" />
-        {/*<Script src="../../prebid/prebid.js" />*/}
+          rel="stylesheet"  />
+        <script src="/prebid.js" />
+        <script async src="//www.googletagservices.com/tag/js/gpt.js"/>
+        <script src="//acdn.adnxs.com/prebid/not-for-prod/prebid.js"/>
       </Head>
       <Header />
       <DetailsHeader>
@@ -123,12 +127,9 @@ const Component = ({ data }) => {
             </p>
           </div>
           <div className="advertisement">
-            <div className="third-ad">
-              <div>ADVERTISEMENT</div>
-              <img src={data?.urls.regular} alt="" />
-            </div>
-            <div className="second-ad"><img src={data?.urls.regular} alt="" /></div>
-            <div className="third-ad"><img src={data?.urls.regular} alt="" /></div>
+           <Advertisement id={uuidv4()} divSize={[728, 90]} />
+            <Advertisement id={uuidv4()} divSize={[727, 485]} />
+            <Advertisement id={uuidv4()} divSize={[728, 90]} />
           </div>
           <p className="pipeline-content-second">
             <p>
@@ -141,7 +142,7 @@ const Component = ({ data }) => {
               posuere maximus dui et fringilla. Nulla non volutpat leo.
             </p>
           </p>
-          <div className="last-ad">ADVERTISEMENT<img src={data?.urls.regular} alt="" /></div>
+          <Advertisement id={uuidv4()} divSize={[728, 90]} />
           <div className="list">
             A list looks like this:
             <ul>
@@ -182,10 +183,7 @@ const Component = ({ data }) => {
           </div>
         </div>
         <div className="sidebar">
-          <div id="sidebar-ad" className="advertisement">
-            ADVERTISEMENT
-            <img src={data?.urls.thumb} alt="" />
-          </div>
+          <Advertisement id={uuidv4()} divSize={[[300, 250]]}/>
         </div>
       </ArticleContent>
       <MostPopular>
