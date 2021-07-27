@@ -128,7 +128,7 @@ const Component = ({ data }) => {
           </div>
           <div className="advertisement">
            <Advertisement id={uuidv4()} divSize={[728, 90]} />
-            <Advertisement id={uuidv4()} divSize={[727, 485]} />
+            <Advertisement id={uuidv4()} divSize={[728, 485]} />
             <Advertisement id={uuidv4()} divSize={[728, 90]} />
           </div>
           <p className="pipeline-content-second">

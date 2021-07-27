@@ -27,7 +27,7 @@ const Advertisement = ({ divSize, id }) => {
   const { ref, inView, entry } = useInView({ threshold: 0 })
   const adSlots = []
   console.log(id)
-  useEffect(() => {
+  // useEffect(() => {
     if (inView) {
       entry.target.id = id;
 
@@ -40,7 +40,7 @@ const Advertisement = ({ divSize, id }) => {
       })
       initAdserver(adSlots)
     }
-  }, [inView, id])
+  // }, [inView, id])
 
   return (
     <div ref={ref} />
