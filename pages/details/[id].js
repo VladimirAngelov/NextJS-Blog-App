@@ -5,6 +5,8 @@ import Image from "next/image"
 import PopularPost from "../../components/popular-post-card"
 import { ArticleContent, DetailsHeader, MostPopular } from "../../components/StyledDetails"
 import Head from "next/head"
+import Script from "next/script"
+import { useEffect } from "react"
 
 export const getStaticPaths = async () => {
   const data = await getAllData()
@@ -19,7 +21,11 @@ export const getStaticProps = async (ctx) => {
 }
 
 const Component = ({ data }) => {
-  // console.log(data)
+
+  useEffect(() => {
+
+  }, [])
+
   return (
     <>
       <Head>
@@ -32,6 +38,7 @@ const Component = ({ data }) => {
         <link
           href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption&family=PT+Serif:wght@400;700&display=swap"
           rel="stylesheet" />
+        {/*<Script src="../../prebid/prebid.js" />*/}
       </Head>
       <Header />
       <DetailsHeader>
@@ -47,7 +54,10 @@ const Component = ({ data }) => {
         </div>
       </DetailsHeader>
       <Image style={{ objectFit: "cover" }} src={data?.urls.regular} width={1920} height={1060}
-             layout={"responsive"} />
+             layout={"responsive"}
+             blurDataURL={data?.urls.regular}
+             placeholder="blur"
+      />
       <ArticleContent>
         <div className="main">
           <div className="post-meta">
@@ -172,7 +182,7 @@ const Component = ({ data }) => {
           </div>
         </div>
         <div className="sidebar">
-          <div className="advertisement">
+          <div id="sidebar-ad" className="advertisement">
             ADVERTISEMENT
             <img src={data?.urls.thumb} alt="" />
           </div>
