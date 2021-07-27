@@ -1,6 +1,5 @@
-import style from "./styles/style.module.css"
 import icons from "../../utils/icons"
-
+import {StyledFooter, StyledAllRights} from "./StyledFooter"
 import FooterPostCard from "../footer-post-card"
 
 const Footer = ({ data }) => {
@@ -9,32 +8,30 @@ const Footer = ({ data }) => {
   }
   return (
     <div>
-      <footer className={style.footer}>
-        <div className={style["footer-content"]}>
+      <StyledFooter>
+        <div className="footer-content">
           <div>
-            <div className={style["footer-logo"]}>Premium <strong> CAR</strong></div>
-            <div className={style["company-description"]}>
-              Short description about the company Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
-              Autem error, voluptate?
+            <div className="footer-logo">Premium <strong> CAR</strong></div>
+            <div className="company-description">
+              Short description about the company Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </div>
-            <div className={style.social}>
+            <div className='social'>
               <strong>Keep in touch</strong>
-              <div className={style.icons}>
+              <div className='icons'>
                 {Object.values(icons).slice(1).map(x => <img src={x} alt="" />)}
               </div>
             </div>
           </div>
-          <div className={style["recent-posts"]}>
+          <div className="recent-posts">
             <strong>Recent posts</strong>
             <FooterPostCard data={data[0] || data} />
             <FooterPostCard data={data[0] || data} />
           </div>
         </div>
-      </footer>
-      <div className={style["all-rights"]}>
+      </StyledFooter>
+      <StyledAllRights>
         <p>&copy; 2019 Logwork. All Rights Reserved.</p>
-      </div>
+      </StyledAllRights>
     </div>
   )
 }

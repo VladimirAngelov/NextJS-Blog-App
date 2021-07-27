@@ -1,16 +1,16 @@
-import style from './styles/style.module.css'
+import { StyledTopRightArticle } from "./StyledTopRightArticle"
 
-const TopRightArticle = ({data}) => {
-    return (
-        <div className={style['top-right-article']}>
-            <img src={data[1].urls.regular} alt=""/>
-            <p className={style.name}>Leon Hunt</p>
-            <p className={style.title}>Food & cooking bloger</p>
-            <p className={style.content}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam
-                deserunt.</p>
-            <button>Continue Reading</button>
-        </div>
-    );
+const TopRightArticle = ({ data }) => {
+  return (
+    <StyledTopRightArticle>
+      <img src={data[1].urls.regular} alt="" />
+      <p className="name">Leon Hunt</p>
+      <p className="title">Food & cooking bloger</p>
+      <p className="content">Hi, I'm Leon. Cooking is the way I express my creative side to the world. Welcome to my
+        Kitchen Corner on…</p>
+      <button>Continue Reading</button>
+    </StyledTopRightArticle>
+  )
 }
 
-export default TopRightArticle;
+export default TopRightArticle

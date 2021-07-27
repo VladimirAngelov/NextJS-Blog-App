@@ -1,27 +1,26 @@
-import style from "./styles/style.module.css"
 import Link from "next/link"
 import Type from "../data-type"
+import { ArticleCard, ArticleContent } from "./StyledArticleCard"
 
 const MainArticle = ({ imageURL, id }) => {
   return (
     <Link href={`/details/${id}`}>
-      <div className={style["main-article"]}>
+      <ArticleCard>
         <img src={imageURL} alt="" />
-        <div className={style["article-content"]}>
-          <Type type={'Vehicle'}/>
-          <p className={style.title}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <ArticleContent>
+          <Type type={"Vehicle"} />
+          <p className={"title"}>
+            One of Saturn’s largest rings may be newer than anyone
           </p>
-          <p className={style.author}>
-            Lorem ipsum dolor sit amet.
+          <p className={"author"}>
+            Rickie Baroch - June 6, 2019
           </p>
-          <p className={style.content}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, ratione, voluptates! Ab at, aut
-            autem culpa deserunt dolor excepturi fugit in iste modi nam nobis odit optio quam, quia rerum
-            sapiente veritatis voluptatum. Assumenda beatae ducimus eos non possimus quaerat!
+          <p className={"content"}>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
           </p>
-        </div>
-      </div>
+        </ArticleContent>
+      </ArticleCard>
     </Link>
   )
 }

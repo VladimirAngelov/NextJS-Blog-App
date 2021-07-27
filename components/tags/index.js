@@ -1,17 +1,18 @@
-import style from "./styles/style.module.css"
+import { StyledTags, TagTitle } from "./StyledTags"
 
 const Tags = () => {
   const tags = ["Business", "Freelance", "Money", "Experience",
     "Lifestyle", "SEO", "Wordpress", "Marketing", "UX", "Modern",
     "Success", "Nature", "Productivity", "Sales page",
     "Sell", "Teamwork", "Monetize"]
-  const data = tags.map(x => (<div key={x} className={style.tag}>{x}</div>))
+  const data = tags.map(x => (<div key={x} className="tag">{x}</div>))
+
   return (
     <>
-      <h2 className={style['tag-title']}>Tags</h2>
-      <div className={style.tags}>
+      <TagTitle>Tags</TagTitle>
+      <StyledTags>
         {data}
-      </div>
+      </StyledTags>
     </>
   )
 }

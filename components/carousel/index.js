@@ -1,12 +1,12 @@
-import style from "./styles/style.module.css"
 import { v4 as uuidv4 } from "uuid"
 import Link from "next/link"
+import { StyledCarousel } from "./StyledCarousel"
 
 const Carousel = ({ data }) => {
   return (
-    <div className={style.carousel}>
+    <StyledCarousel>
       <h2>Partners</h2>
-      <div className={style.partners}>
+      <div className="partners">
         {data.slice(0, 5)?.map(p => (
           <>
             <Link href="/">
@@ -24,7 +24,7 @@ const Carousel = ({ data }) => {
           </>
         ))}
       </div>
-    </div>
+    </StyledCarousel>
   )
 }
 

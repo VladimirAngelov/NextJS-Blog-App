@@ -1,9 +1,25 @@
 .container {
-    margin: 5vh 14.7vw;
+    margin: 2em 24em;
 }
 
-@media only screen and (max-width: 575.98px) {
+@media (max-width: 87.5em) {
     .container {
-        margin: 4vh 10vw;
+        margin: 2em 2em
+    }
+}
+
+@media (max-width: 75em) {
+    .container {
+        margin: 0.5em 2.5em;
+    }
+}
+
+@media (max-width: 62em) {
+
+}
+
+@media only screen and (max-width: 48em) {
+    .container {
+        margin: 0 1em;
     }
 }

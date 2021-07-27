@@ -1,18 +1,18 @@
-import style from "./styles/style.module.css"
+import { StyledFooterPostCard } from "./StyledFooterPostCard"
 
 const FooterPostCard = ({ data }) => {
   return (
-    <div className={style["footer-post-card"]}>
+    <StyledFooterPostCard>
       <img src={data?.urls.regular} alt="" />
-      <div className={style["content"]}>
-        <p className={style["footer-post-title"]}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing.
+      <div className="content">
+        <p className="footer-post-title">
+          One of Saturn’s largest rings may be newer than…
         </p>
-        <p className={style["footer-post-author"]}>
-          Lorem ipsum dolor sit.
+        <p className="footer-post-author">
+          Rickie Baroch - June 6, 2019
         </p>
       </div>
-    </div>
+    </StyledFooterPostCard>
   )
 }
 

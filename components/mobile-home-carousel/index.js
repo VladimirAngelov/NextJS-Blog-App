@@ -1,32 +1,31 @@
-import style from "./styles/style.module.css"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Type from "../data-type"
+import { CarouselContainer, MobileCarousel, Dots } from "./StyledMobileCarousel"
 
 const MobileHomeCarousel = ({ data }) => {
   const [currentId, setCurrentId] = useState(data[0].id)
-
-  const dots = data.slice(0, 5).map(x => <div onClick={() => setCurrentId(x.id)} className={style.dot}/>)
+  const dots = data.slice(0, 5).map(x => <div onClick={() => setCurrentId(x.id)} className="dot" />)
   const currentArticle = data.find(x => x.id === currentId)
 
   return (
-    <div className={style["carousel-container"]}>
-      <div className={style["mobile-home-carousel"]}>
+    <CarouselContainer>
+      <MobileCarousel>
         <Link href={`/details/${currentArticle?.id}`}>
-          <div style={{ width: "100%", display: "inline", height: "10vh" }}>
-            <Type type={'Vehicle'}/>
-            <p className={style.author}>Lorem ipsum dolor sit amet.</p>
-            <p className={style.title}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio,
+          <div className="post-data">
+            <Type type={"Vehicle"} />
+            <p className="author">Rickie Baroch - June 6, 2019</p>
+            <p className="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio,
               recusandae?</p>
-            <Image src={currentArticle?.urls?.regular} alt="" layout="fill" />
+            <Image id="carousel-image" src={currentArticle?.urls?.regular} alt="" layout="fill" />
           </div>
         </Link>
-        <div className={style.dots}>
+        <Dots>
           {dots}
-        </div>
-      </div>
-    </div>
+        </Dots>
+      </MobileCarousel>
+    </CarouselContainer>
   )
 }
 

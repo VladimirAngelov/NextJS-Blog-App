@@ -1,5 +1,5 @@
-import style from "./styles/style.module.css"
+import { StyledType } from "./StyledDataType"
 
-const Type = ({ type }) => <div className={style.type}>{type}</div>
+const Type = ({ type }) => <StyledType>{type}</StyledType>
 
 export default Type

@@ -1,16 +1,16 @@
-import style from "./styles/style.module.css"
 import Link from "next/link"
 import Type from "../data-type"
+import { StyledPostCard } from "./StyledPopularPost"
 
 const PopularPost = ({ imageURL, id }) => {
   return (
     <Link href={`/details/${id}`}>
-      <div className={style["popular-post"]}>
+      <StyledPostCard>
         <Type type={'Vehicle'}/>
         <img src={imageURL} alt="" />
-        <p className={style.title}>Lorem ipsum dolor sit amet, consectetur.</p>
-        <p className={style.author}>Lorem ipsum dolor sit.</p>
-      </div>
+        <p className="title">One of Saturn’s largest rings may be newer than anyone</p>
+        <p className="author">Rickie Baroch - June 6, 2019</p>
+      </StyledPostCard>
     </Link>
   )
 }
