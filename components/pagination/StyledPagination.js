@@ -31,7 +31,7 @@ export const Pagination = styled.div`
       width: 10vw;
     }
 
-    @media (min-width: 120em) {
+    @media (min-width: 121em) {
       width: 2em;
       height: 2em;
       font-size: 3rem;
